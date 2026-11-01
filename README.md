@@ -1,5 +1,4 @@
-<img width="1920" height="1080" alt="luav" src="https://github.com/user-attachments/assets/58441c4f-c1f9-4154-80ae-e8ce2f9dcb0d" />
-
 # LuaV
-LuaV is a plugin for Grand Theft Auto V that embeds LuaJIT and allow modders to write Lua scripts.
-This is a personal fork of said plugin
+LuaV is a plugin made by m3nd3zz (https://github.com/m3nd3zz/LuaV) for Grand Theft Auto V, that embeds LuaJIT and allow modders to write Lua scripts.
+
+This is a personal fork of said plugin where i can fix, modify or upgrade things for myself
