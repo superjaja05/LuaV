@@ -1,0 +1,21 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: microsoft/setup-msbuild@v2
+      - name: Build
+        run: msbuild LuaV/LuaV.vcxproj /p:Configuration=Release /p:Platform=x64 /p:OutDir=out\
+      - name: Zip lua folder
+        run: Compress-Archive -Path lua -DestinationPath lua-scripts.zip
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            LuaV/out/LuaV.asi
+            lua-scripts.zip
